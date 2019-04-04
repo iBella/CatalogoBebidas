@@ -67,9 +67,9 @@ namespace CatalogoApi.Controllers
             _bebidaService.Cadastrar(bebida);
 
             if(bebida.Tipo == "CERVEJA"){
-                return CreatedAtRoute("ListarCerveja", new { id = bebida.Id.ToString() }, bebida);
+                return CreatedAtRoute("ListarCervejas", new { id = bebida.Id.ToString() }, bebida);
             }
-            return CreatedAtRoute("ListarCachaca", new { id = bebida.Id.ToString() }, bebida);
+            return CreatedAtRoute("ListarCachacas", new { id = bebida.Id.ToString() }, bebida);
         }
 
         [HttpPut("editar/{id:length(24)}", Name = "Editar")]
@@ -84,7 +84,7 @@ namespace CatalogoApi.Controllers
 
             _bebidaService.Editar(id, novaBebida);
 
-            return NoContent();
+            return CreatedAtRoute("ListarBebida", null, novaBebida);
         }
 
         [HttpDelete("remover/{id:length(24)}", Name = "Remover")]
