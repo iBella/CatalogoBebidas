@@ -1,0 +1,14 @@
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\bin\Debug\netcoreapp2.1\CatalogoApi.deps.json
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\bin\Debug\netcoreapp2.1\CatalogoApi.runtimeconfig.json
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\bin\Debug\netcoreapp2.1\CatalogoApi.runtimeconfig.dev.json
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\bin\Debug\netcoreapp2.1\CatalogoApi.dll
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\bin\Debug\netcoreapp2.1\CatalogoApi.pdb
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.csprojAssemblyReference.cache
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.csproj.CoreCompileInputs.cache
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.RazorAssemblyInfo.cache
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.RazorAssemblyInfo.cs
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.AssemblyInfoInputs.cache
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.AssemblyInfo.cs
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.RazorTargetAssemblyInfo.cache
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.dll
+C:\Users\55319\Desktop\Catalogo\CatalogoApi\obj\Debug\netcoreapp2.1\CatalogoApi.pdb
