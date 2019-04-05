@@ -29,3 +29,7 @@ ul {
     color: white;
     background-color: rgb(196, 96, 14);
   }
+  li a.adicionar {
+    color: white;
+    background-color: rgb(21, 156, 9);
+  }

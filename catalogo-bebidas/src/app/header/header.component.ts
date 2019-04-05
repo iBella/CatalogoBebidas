@@ -19,5 +19,8 @@ export class HeaderComponent implements OnInit {
   onClickCachaca(event: Event) {
     this.router.navigate(['/catalogo-cachaca']);
   } 
+  onClickAdd(event: Event) {
+    this.router.navigate(['/adicionar']);
+  } 
 
 }
