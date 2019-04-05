@@ -7,14 +7,14 @@ import { DataService } from '../data.service';
   styleUrls: ['./catalogo-cerveja.component.css']
 })
 export class CatalogoCervejaComponent implements OnInit {
-  public pictures = [];
+  private cervejas = [];
 
 
   constructor(private dataService: DataService) {
 
-    this.dataService.get_pictures2().subscribe((res: any[]) => {
+    this.dataService.get_cervejas().subscribe((res: any[]) => {
       console.log(res);
-      this.pictures = res;
+      this.cervejas = res;
     });
 
 

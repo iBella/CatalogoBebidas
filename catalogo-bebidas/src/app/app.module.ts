@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { CatalogoCervejaComponent } from './catalogo-cerveja/catalogo-cerveja.component';
 import { CatalogoCachacaComponent } from './catalogo-cachaca/catalogo-cachaca.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroEscolhaComponent } from './cadastro-escolha/cadastro-escolha.component';
+import { CadastroCervejaComponent } from './cadastro-cerveja/cadastro-cerveja.component';
+import { CadastroCachacaComponent } from './cadastro-cachaca/cadastro-cachaca.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     TelaInicialComponent,
     HeaderComponent,
     CatalogoCervejaComponent,
-    CatalogoCachacaComponent
+    CatalogoCachacaComponent,
+    CadastroEscolhaComponent,
+    CadastroCervejaComponent,
+    CadastroCachacaComponent
   ],
   imports: [
     BrowserModule,
