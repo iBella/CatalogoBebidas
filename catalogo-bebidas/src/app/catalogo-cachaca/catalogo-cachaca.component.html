@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<main class="cards" >
+    <article class="card" *ngFor="let picture of pictures">
+      <img [src]= "picture.img" alt="Sample photo">
+      <div class="text">
+        <h3>{{picture.title}}</h3>
+        <p class="info">Collaboratively administrate empowered markets via plug-and-play networks.</p>
+        <li class="info">Preço: {{picture.preco}}</li>
+        <li class="info">Teor: {{picture.teor}}</li>
+        <li class="info">Quantidade: {{picture.quantidade}}</li>
+        <li class="info">Cor: {{picture.cor}}</li>
+        <li class="info">Madeira: {{picture.madeira}}</li>
+        <button class= "botao-info">Here's why</button>
+      </div>
+    </article>
+  </main>
