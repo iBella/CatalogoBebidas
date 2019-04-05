@@ -1,0 +1,11 @@
+CatalogoAPI
+
+https://localhost:44326/
+
+Todas as bebidas:          api/bebidas
+Retornar bebida:           api/bebidas/{id}
+Retornar todas cervejas:   api/bebidas/cervejas
+Retornar todas cachacas:   api/bebidas/cachacas
+Cadastrar bebida:          api/bebidas/cadastrar
+Atualizar bebida:          api/bebidas/editar/{id}
+Remover bebida:            api/bebidas/remover/{id}
