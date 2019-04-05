@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "297a9079-5e65-429c-9a52-baa6e1c0df96",
+		"name": "Catalogo CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cerveja",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.globals.set(\"cervejaID\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Nome\": \"Heineken Barril 3\",\n  \"Preco\": 79.9,\n  \"Estilo\": \"Larger\",\n  \"Tipo\": \"CERVEJA\",\n  \"Quantidade\": 5,\n  \"Descricao\": \"Cerveja do estilo Premium American Lager, esta é uma das cervejas mais famosas e vendidas no mundo. Cerveja caracteristicamente refrescante, com espuma branca e boa duração.\",\n  \"Teor\": 5\n}"
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/cadastrar",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/cervejas",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"cervejas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{cervejaID}}\",\n  \"Nome\": \"Heineken Barril 2 (editado)\",\n  \"Preco\": 79.9,\n  \"Estilo\": \"Larger\",\n  \"Tipo\": \"CERVEJA\",\n  \"Quantidade\": 5,\n  \"Descricao\": \"Cerveja do estilo Premium American Lager, esta é uma das cervejas mais famosas e vendidas no mundo. Cerveja caracteristicamente refrescante, com espuma branca e boa duração.\",\n  \"Teor\": 5\n}"
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/editar/{{cervejaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"editar",
+								"{{cervejaID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/{{cervejaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"{{cervejaID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/remover/{{cervejaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"remover",
+								"{{cervejaID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cachaça",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9049be95-9cf4-4e3a-a23e-ae5afa792af0",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.globals.set(\"cachacaID\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Nome\": \"Cachaça Opinião 4\",\n  \"Preco\": 6036.89,\n  \"Tipo\": \"CACHACA\",\n  \"Quantidade\": 0.7,\n  \"Descricao\": \"Cachaça armazenada em tóneis de carvalho. Elaborada a base de caldo de cana de açúcar.\",\n  \"Teor\": 38,\n  \"Cor\": \"Ouro\",\n  \"Madeira\": \"Carvalho\"\n}"
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/cadastrar",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/cachacas",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"cachacas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{cachacaID}}\",\n  \"Nome\": \"Cachaça Opinião 4 (editado)\",\n  \"Preco\": 6036.89,\n  \"Tipo\": \"CACHACA\",\n  \"Quantidade\": 0.7,\n  \"Descricao\": \"Cachaça armazenada em tóneis de carvalho. Elaborada a base de caldo de cana de açúcar.\",\n  \"Teor\": 38,\n  \"Cor\": \"Ouro\",\n  \"Madeira\": \"Carvalho\"\n}"
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/editar/{{cachacaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"editar",
+								"{{cachacaID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/{{cachacaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"{{cachacaID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover (id)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+								"exec": [
+									"pm.test(\"Response is ok\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas/remover/{{cachacaID}}",
+							"protocol": "https",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"bebidas",
+								"remover",
+								"{{cachacaID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listar Bebidas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d16194f-ca21-4597-96b1-a5b561be5a0d",
+						"exec": [
+							"pm.test(\"Response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{ADDRESS}}:{{PORT}}/api/bebidas",
+					"protocol": "https",
+					"host": [
+						"{{ADDRESS}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"bebidas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
