@@ -14,7 +14,7 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   get_cervejas() {
-    return this.httpClient.get(this.baseUrl + '/bebidas/cervejas');
+    return this.httpClient.get(this.baseUrl + 'bebidas/cervejas');
   }
 
   post_cervejas(cerveja){

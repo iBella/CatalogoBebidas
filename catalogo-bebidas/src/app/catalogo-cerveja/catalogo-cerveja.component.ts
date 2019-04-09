@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./catalogo-cerveja.component.css']
 })
 export class CatalogoCervejaComponent implements OnInit {
-  private cervejas = [];
+  public cervejas = [];
 
 
   constructor(private dataService: DataService) {

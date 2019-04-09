@@ -17,7 +17,7 @@ export class CadastroCervejaComponent implements OnInit {
     this.form = this.fb.group({
       nome: [null, [Validators.required, Validators.minLength(3)]],
       descricao: [null, [Validators.required, Validators.minLength(3)]],
-      tipo: ["Cerveja"],
+      tipo: ["CERVEJA"],
       preco: [null, [Validators.required, Validators.minLength(3)]],
       teor: [null, [Validators.required, Validators.minLength(3)]],
       quantidade: [null, [Validators.required, Validators.minLength(3)]],
