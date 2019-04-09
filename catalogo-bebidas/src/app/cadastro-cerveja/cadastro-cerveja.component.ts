@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-cadastro-cerveja',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroCervejaComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private fb: FormBuilder, private dataService: DataService) { }
 
   ngOnInit() {
+    this.form = this.fb.group({
+      nome: [null, [Validators.required, Validators.minLength(3)]],
+      descricao: [null, [Validators.required, Validators.minLength(3)]],
+      tipo: ["Cerveja"],
+      preco: [null, [Validators.required, Validators.minLength(3)]],
+      teor: [null, [Validators.required, Validators.minLength(3)]],
+      quantidade: [null, [Validators.required, Validators.minLength(3)]],
+      estilo: [null, [Validators.required, Validators.minLength(3)]],
+      imagem: [null, [Validators.required, Validators.minLength(3)]]
+    });
   }
+
+  OnSubmit() {
+    console.log(this.form.value);
+    if (this.form.valid) {
+      console.log('submit');
+      this.dataService.post_cervejas(this.form.value).subscribe(
+        success => console.log('sucesso!'),
+        error => console.error(error),
+        () => console.log('Request OK')
+      );
+    }
+  }
+
 
 }

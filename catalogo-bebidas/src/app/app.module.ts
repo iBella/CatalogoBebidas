@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastroEscolhaComponent } from './cadastro-escolha/cadastro-escolha.component';
 import { CadastroCervejaComponent } from './cadastro-cerveja/cadastro-cerveja.component';
 import { CadastroCachacaComponent } from './cadastro-cachaca/cadastro-cachaca.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CadastroCachacaComponent } from './cadastro-cachaca/cadastro-cachaca.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
