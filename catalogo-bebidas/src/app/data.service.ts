@@ -17,7 +17,12 @@ export class DataService {
     return this.httpClient.get(this.baseUrl + 'bebidas/cervejas');
   }
 
-  post_cervejas(cerveja){
-    return this.httpClient.post(this.baseUrl + 'bebidas/cadastrar', cerveja).pipe();
+  get_cachacas() {
+    return this.httpClient.get(this.baseUrl + 'bebidas/cachacas');
   }
+
+  post_bebida(info){
+    return this.httpClient.post(this.baseUrl + 'bebidas/cadastrar', info).pipe();
+  }
+
 }

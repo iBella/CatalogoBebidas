@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   font-family: exo, sans-serif;
+  justify-content: center;
 }
 
 .card {

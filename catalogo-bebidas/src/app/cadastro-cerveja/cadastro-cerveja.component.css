@@ -1,8 +1,16 @@
-.form-group, .row {
-    margin: 20px;
-    padding: 0px;
+.formulario {
+    margin: 30px;
 }
 
 .btn{
     float: right;
+    background-color: rgb(219, 134, 7);
+    border-color: rgb(219, 134, 7);
+    margin-bottom: 20px;
+}
+.titulo{
+    margin: 20px;
+}
+.form-group{
+    padding-top: 10px;
 }

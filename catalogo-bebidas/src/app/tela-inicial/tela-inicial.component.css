@@ -23,17 +23,17 @@
 
 .titulo {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .botao {
     background-color:  rgb(196, 96, 14);
     border: none;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 15px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     
 }

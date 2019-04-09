@@ -30,7 +30,7 @@ export class CadastroCervejaComponent implements OnInit {
     console.log(this.form.value);
     if (this.form.valid) {
       console.log('submit');
-      this.dataService.post_cervejas(this.form.value).subscribe(
+      this.dataService.post_bebida(this.form.value).subscribe(
         success => console.log('sucesso!'),
         error => console.error(error),
         () => console.log('Request OK')

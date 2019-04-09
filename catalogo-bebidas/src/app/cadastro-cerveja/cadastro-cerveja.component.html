@@ -1,7 +1,9 @@
 <app-header></app-header>
 
 
-<form [formGroup]="form">
+<h2 class = "titulo">Cadastrar Cerveja</h2>
+
+<form [formGroup]="form" class="formulario">
     <div class="form-group">
         <label for="nome">Nome da Bebida</label>
         <input id="nome" name="nome" type="text" required="required" class="form-control" formControlName = "nome">
@@ -31,7 +33,7 @@
             <label for="estilo">Estilo</label>
             <div>
                 <select id="estilo" name="estilo" class="custom-select" formControlName = "estilo">
-                    <option value="ale">Ale</option>
+                    <option selected value="ale">Ale</option>
                     <option value="lager">Lager</option>
                 </select>
             </div>

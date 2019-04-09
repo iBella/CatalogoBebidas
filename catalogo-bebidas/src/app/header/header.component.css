@@ -1,37 +1,54 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-    display: flex;
-    align-items: center;
-  }
-  
-  li {
-    float: left;
-    font-family: exo, sans-serif;
-    cursor: pointer;
-  }
-  
-  li a {
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.header a.active {
+  background-color: rgb(219, 134, 7);
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
     display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    text-align: left;
   }
   
-  li a:hover:not(.active) {
-    background-color: #ddd;
+  .header-right {
+    float: none;
   }
-  
-  li a.active {
-    color: white;
-    background-color: rgb(196, 96, 14);
-  }
-  li a.adicionar {
-    color: white;
-    background-color: rgb(21, 156, 9);
-  }
+}
+.opcao{
+  cursor: pointer;
+  margin-right: 10px;
+}

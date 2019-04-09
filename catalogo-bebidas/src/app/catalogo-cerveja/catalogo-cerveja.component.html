@@ -1,20 +1,17 @@
 <app-header></app-header>
 
-<div class="pesquisa">
-
-</div>
 
 <main class="cards">
   <article class="card" *ngFor="let cerveja of cervejas">
     <img [src]="cerveja.imagem" alt="Sample photo">
     <div class="text">
       <h3>{{cerveja.nome}}</h3>
-      <p class="info">Collaboratively administrate empowered markets via plug-and-play networks.</p>
+      <p class="info">{{cerveja.descricao}}</p>
       <li class="info">Preço: {{cerveja.preco}}</li>
       <li class="info">Teor: {{cerveja.teor}}</li>
       <li class="info">Quantidade: {{cerveja.quantidade}}</li>
       <li class="info">Estilo: {{cerveja.estilo}}</li>
-      <button class="botao-info">Here's why</button>
+      <button class="botao-info">Editar</button>
     </div>
   </article>
 </main>

@@ -1,6 +1,8 @@
-<ul class = "flex">
-  <li><a class="active" href="#home">Catálogo de Bebidas</a></li>
-  <li><a (click)="onClickCerveja($event)">Cervejas</a></li>
-  <li><a (click)="onClickCachaca($event)">Cachaças</a></li>
-  <li><a class="adicionar" (click)="onClickAdd($event)">Adicionar Bebida</a></li>
-</ul>
+<div class="header">
+  <a href="#home" class="logo">Catálogo de Bebidas</a>
+  <div class="header-right">
+    <a class="opcao active" (click)="onClickAdd($event)">Cadastrar</a>
+    <a class = "opcao" (click)="onClickCachaca($event)">Cachaças</a>
+    <a class = "opcao" (click)="onClickCerveja($event)">Cervejas</a>
+  </div>
+</div>

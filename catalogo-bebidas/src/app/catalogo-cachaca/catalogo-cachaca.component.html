@@ -1,17 +1,17 @@
 <app-header></app-header>
 
 <main class="cards">
-    <article class="card" *ngFor="let picture of pictures">
-      <img [src]= "picture.img" alt="Sample photo" class = "imagem-cachaca">
-      <div class="text">
-        <h3>{{picture.title}}</h3>
-        <p class="info">Collaboratively administrate empowered markets via plug-and-play networks.</p>
-        <li class="info">Preço: {{picture.preco}}</li>
-        <li class="info">Teor: {{picture.teor}}</li>
-        <li class="info">Quantidade: {{picture.quantidade}}</li>
-        <li class="info">Cor: {{picture.cor}}</li>
-        <li class="info">Madeira: {{picture.madeira}}</li>
-        <button class= "botao-info">Here's why</button>
-      </div>
-    </article>
-  </main>
+  <article class="card" *ngFor="let cachaca of cachacas">
+    <img [src]="cachaca.imagem" alt="Sample photo" class="imagem-cachaca">
+    <div class="text">
+      <h3>{{cachaca.nome}}</h3>
+      <p class="info">{{cachaca.descricao}}</p>
+      <li class="info">Preço: {{cachaca.preco}}</li>
+      <li class="info">Teor: {{cachaca.teor}}</li>
+      <li class="info">Quantidade: {{cachaca.quantidade}}</li>
+      <li class="info">Cor: {{cachaca.cor}}</li>
+      <li class="info">Madeira: {{cachaca.madeira}}</li>
+      <button class="botao-info">Editar</button>
+    </div>
+  </article>
+</main>
