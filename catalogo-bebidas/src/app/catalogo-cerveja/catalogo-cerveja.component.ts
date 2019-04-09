@@ -16,8 +16,6 @@ export class CatalogoCervejaComponent implements OnInit {
       console.log(res);
       this.cervejas = res;
     });
-
-
   }
 
   ngOnInit() {
