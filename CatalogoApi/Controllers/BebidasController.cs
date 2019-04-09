@@ -73,7 +73,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpPut("editar/{id:length(24)}", Name = "Editar")]
-        public IActionResult Editar(string id, Bebida novaBebida)
+        public IActionResult Editar(string id, Bebida bebidaEditada)
         {
             var bebida = _bebidaService.Listar(id);
 
@@ -82,9 +82,9 @@ namespace CatalogoApi.Controllers
                 return NotFound();
             }
 
-            _bebidaService.Editar(id, novaBebida);
+            _bebidaService.Editar(id, bebidaEditada);
 
-            return CreatedAtRoute("ListarBebida", null, novaBebida);
+            return CreatedAtRoute("ListarBebida", null, bebidaEditada);
         }
 
         [HttpDelete("remover/{id:length(24)}", Name = "Remover")]

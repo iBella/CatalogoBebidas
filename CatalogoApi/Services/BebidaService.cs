@@ -1,56 +1,47 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using CatalogoApi.Models;
+using CatalogoApi.Infraestruturas;
 using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
 
 namespace CatalogoApi.Services
 {
-    public class BebidaService
+    public class BebidaService : IBebidaService
     {
-        private readonly IMongoCollection<Bebida> _bebidas;
+        private MongoDAO<Bebida> bebidaDAO;
 
         public BebidaService(IConfiguration config)
         {
-            var client = new MongoClient(config.GetConnectionString("CatalogoDb"));
-            var database = client.GetDatabase("CatalogoDb");
-            _bebidas = database.GetCollection<Bebida>("Bebidas");
+            bebidaDAO = new MongoDAO<Bebida>(config, "CatalogoDb", "Bebidas");
         }
 
         public List<Bebida> Listar()
         {
-            return _bebidas.Find(bebida => true).ToList();
+            return bebidaDAO.ListarTodas();
         }
 
         public Bebida Listar(string id)
         {
-            return _bebidas.Find<Bebida>(bebida => bebida.Id == id).FirstOrDefault();
+            return bebidaDAO.Listar(id);
         }
 
         public List<Bebida> ListarPor(string tipo)
         {
-            return _bebidas.Find<Bebida>(bebida => bebida.Tipo == tipo).ToList();
+            return bebidaDAO.ListaPor(tipo);
         }
 
         public Bebida Cadastrar(Bebida bebida)
         {
-            _bebidas.InsertOne(bebida);
-            return bebida;
+            return bebidaDAO.Cadastrar(bebida);
         }
 
-        public void Editar(string id, Bebida bebidaNova)
+        public Bebida Editar(string id, Bebida bebidaNova)
         {
-            _bebidas.ReplaceOne(bebida => bebida.Id == id, bebidaNova);
-        }
-
-        public void Remover(Bebida bebidaExcluida)
-        {
-            _bebidas.DeleteOne(book => book.Id == bebidaExcluida.Id);
+            return bebidaDAO.Editar(id, bebidaNova);
         }
 
         public void Remover(string id)
         {
-            _bebidas.DeleteOne(bebida => bebida.Id == id);
+            bebidaDAO.Remover(id);
         }
     }
 }
