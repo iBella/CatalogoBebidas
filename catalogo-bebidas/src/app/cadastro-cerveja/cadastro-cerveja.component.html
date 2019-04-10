@@ -1,49 +1,100 @@
 <app-header></app-header>
 
-
-<h2 class = "titulo">Cadastrar Cerveja</h2>
+<h2 class="titulo">Cadastrar Cerveja</h2>
 
 <form [formGroup]="form" class="formulario">
-    <div class="form-group">
-        <label for="nome">Nome da Bebida</label>
-        <input id="nome" name="nome" type="text" required="required" class="form-control" formControlName = "nome">
+  <div class="form-group">
+    <label for="nome">Nome da Bebida</label>
+    <input
+      id="nome"
+      name="nome"
+      type="text"
+      required="required"
+      class="form-control"
+      formControlName="nome"
+    />
+  </div>
+  <div class="form-group">
+    <label for="descricao">Descrição</label>
+    <textarea
+      id="descricao"
+      name="descricao"
+      required="required"
+      cols="40"
+      rows="5"
+      class="form-control"
+      formControlName="descricao"
+    ></textarea>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label for="valor">Valor</label>
+      <input
+        id="valor"
+        name="valor"
+        placeholder="R$"
+        required="required"
+        maxlength="10"
+        type="text"
+        class="form-control"
+        formControlName="preco"
+      />
     </div>
-    <div class="form-group">
-        <label for="descricao">Descrição</label>
-        <textarea id="descricao" name="descricao" required="required" cols="40" rows="5"
-            class="form-control" formControlName = "descricao"></textarea>
+    <div class="col-md-2">
+      <label for="teor">Teor Alcoolico</label>
+      <input
+        id="teor"
+        name="teor"
+        placeholder="%"
+        required="required"
+        maxlength="10"
+        type="text"
+        class="form-control"
+        formControlName="teor"
+      />
     </div>
-    <div class="row">
-        <div class="col-md-2">
-            <label for="valor">Valor</label>
-            <input id="valor" name="valor" placeholder="R$" required="required" maxlength="10" type="text"
-                class="form-control" formControlName = "preco">
-        </div>
-        <div class="col-md-2">
-            <label for="teor">Teor Alcoolico</label>
-            <input id="teor" name="teor" placeholder="%" required="required" maxlength="10" type="text"
-                class="form-control" formControlName = "teor">
-        </div>
-        <div class="col-md-2">
-            <label for="quantidade">Quantidade</label>
-            <input id="quantidade" name="quantidade" placeholder="ml" required="required" maxlength="10" type="text"
-                class="form-control" formControlName = "quantidade">
-        </div>
-        <div class="col-md-6">
-            <label for="estilo">Estilo</label>
-            <div>
-                <select id="estilo" name="estilo" class="custom-select" formControlName = "estilo">
-                    <option selected value="ale">Ale</option>
-                    <option value="lager">Lager</option>
-                </select>
-            </div>
-        </div>
+    <div class="col-md-2">
+      <label for="quantidade">Quantidade</label>
+      <input
+        id="quantidade"
+        name="quantidade"
+        placeholder="ml"
+        required="required"
+        maxlength="10"
+        type="text"
+        class="form-control"
+        formControlName="quantidade"
+      />
     </div>
-    <div class="form-group">
-        <label for="nome">Link da Imagem</label>
-        <input id="nome" name="nome" type="text" required="required" class="form-control" formControlName = "imagem">
+    <div class="col-md-6">
+      <label for="estilo">Estilo</label>
+      <div>
+        <select
+          id="estilo"
+          name="estilo"
+          class="custom-select"
+          formControlName="estilo"
+        >
+          <option selected value="ale">Ale</option>
+          <option value="lager">Lager</option>
+        </select>
+      </div>
     </div>
-    <div class="form-group">
-        <button type ="submit" class="btn btn-primary" (click)="OnSubmit()">Cadastrar</button>
-    </div>
+  </div>
+  <div class="form-group">
+    <label for="nome">Link da Imagem</label>
+    <input
+      id="nome"
+      name="nome"
+      type="text"
+      required="required"
+      class="form-control"
+      formControlName="imagem"
+    />
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" (click)="OnSubmit()">
+      Cadastrar
+    </button>
+  </div>
 </form>

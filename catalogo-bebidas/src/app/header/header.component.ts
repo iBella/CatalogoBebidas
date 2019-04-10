@@ -1,26 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';    
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClickCerveja(event: Event) {
-    this.router.navigate(['/catalogo-cerveja']);
-  } 
+    this.router.navigate(["/catalogo-cerveja"]);
+  }
   onClickCachaca(event: Event) {
-    this.router.navigate(['/catalogo-cachaca']);
-  } 
+    this.router.navigate(["/catalogo-cachaca"]);
+  }
   onClickAdd(event: Event) {
-    this.router.navigate(['/adicionar']);
-  } 
-
+    this.router.navigate(["/adicionar"]);
+  }
 }

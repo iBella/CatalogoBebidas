@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';    
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-tela-inicial',
-  templateUrl: './tela-inicial.component.html',
-  styleUrls: ['./tela-inicial.component.css']
+  selector: "app-tela-inicial",
+  templateUrl: "./tela-inicial.component.html",
+  styleUrls: ["./tela-inicial.component.css"]
 })
 export class TelaInicialComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClickMe(event: Event) {
-    this.router.navigate(['/catalogo-cerveja']);
-  }  
+    this.router.navigate(["/catalogo-cerveja"]);
+  }
 }

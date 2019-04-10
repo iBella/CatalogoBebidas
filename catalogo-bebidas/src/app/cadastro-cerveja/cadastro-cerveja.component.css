@@ -2,15 +2,17 @@
     margin: 30px;
 }
 
-.btn{
+.btn {
     float: right;
     background-color: rgb(219, 134, 7);
     border-color: rgb(219, 134, 7);
     margin-bottom: 20px;
 }
-.titulo{
+
+.titulo {
     margin: 20px;
 }
-.form-group{
+
+.form-group {
     padding-top: 10px;
 }

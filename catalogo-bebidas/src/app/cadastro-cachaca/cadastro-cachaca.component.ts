@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { DataService } from '../data.service';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { DataService } from "../data.service";
 
 @Component({
-  selector: 'app-cadastro-cachaca',
-  templateUrl: './cadastro-cachaca.component.html',
-  styleUrls: ['./cadastro-cachaca.component.css']
+  selector: "app-cadastro-cachaca",
+  templateUrl: "./cadastro-cachaca.component.html",
+  styleUrls: ["./cadastro-cachaca.component.css"]
 })
 export class CadastroCachacaComponent implements OnInit {
-
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private dataService: DataService) { }
+  constructor(private fb: FormBuilder, private dataService: DataService) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -30,13 +29,14 @@ export class CadastroCachacaComponent implements OnInit {
   OnSubmit() {
     console.log(this.form.value);
     if (this.form.valid) {
-      console.log('submit');
-      this.dataService.post_bebida(this.form.value).subscribe(
-        success => console.log('sucesso!'),
-        error => console.error(error),
-        () => console.log('Request OK')
-      );
+      console.log("submit");
+      this.dataService
+        .post_bebida(this.form.value)
+        .subscribe(
+          success => console.log("sucesso!"),
+          error => console.error(error),
+          () => console.log("Request OK")
+        );
     }
   }
-
 }

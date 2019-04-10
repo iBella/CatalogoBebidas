@@ -5,7 +5,6 @@
     font-family: exo, sans-serif;
     text-align: center;
     padding-top: 50px;
-
 }
 
 .titulo {
@@ -14,7 +13,7 @@
 }
 
 .botao {
-    background-color:  rgb(219, 134, 7);
+    background-color: rgb(219, 134, 7);
     border: none;
     color: white;
     padding: 15px 20px;

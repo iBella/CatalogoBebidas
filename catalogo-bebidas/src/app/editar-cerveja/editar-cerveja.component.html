@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<h2 class="titulo">Cadastrar Cachaça</h2>
+<h2 class="titulo">Editar Cerveja</h2>
 
 <form [formGroup]="form" class="formulario">
   <div class="form-group">
@@ -66,30 +66,17 @@
         formControlName="quantidade"
       />
     </div>
-    <div class="col-md-3">
-      <label for="cor">Cor</label>
-      <div>
-        <select id="cor" name="cor" class="custom-select" formControlName="cor">
-          <option selected value="branca">Branca</option>
-          <option value="amarela">Amarela</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <label for="madeira">Madeira</label>
+    <div class="col-md-6">
+      <label for="estilo">Estilo</label>
       <div>
         <select
-          id="madeira"
-          name="madeira"
+          id="estilo"
+          name="estilo"
           class="custom-select"
-          formControlName="madeira"
+          formControlName="estilo"
         >
-          <option selected value="araucaria">Araucária</option>
-          <option value="carvalho">Carvalho</option>
-          <option value="balsamo">Bálsamo</option>
-          <option value="castanheira">Castanheira</option>
-          <option value="araroba">Araroba</option>
-          <option value="umburama">Umburama</option>
+          <option selected value="ale">Ale</option>
+          <option value="lager">Lager</option>
         </select>
       </div>
     </div>

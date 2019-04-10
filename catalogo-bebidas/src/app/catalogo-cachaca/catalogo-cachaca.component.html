@@ -2,15 +2,15 @@
 
 <main class="cards">
   <article class="card" *ngFor="let cachaca of cachacas">
-    <img [src]="cachaca.imagem" alt="Sample photo" class="imagem-cachaca">
+    <img [src]="cachaca.imagem" alt="Sample photo" class="imagem-cachaca" />
     <div class="text">
-      <h3>{{cachaca.nome}}</h3>
-      <p class="info">{{cachaca.descricao}}</p>
-      <li class="info">Preço: {{cachaca.preco}}</li>
-      <li class="info">Teor: {{cachaca.teor}}</li>
-      <li class="info">Quantidade: {{cachaca.quantidade}}</li>
-      <li class="info">Cor: {{cachaca.cor}}</li>
-      <li class="info">Madeira: {{cachaca.madeira}}</li>
+      <h3>{{ cachaca.nome }}</h3>
+      <p class="info">{{ cachaca.descricao }}</p>
+      <li class="info">Preço: {{ cachaca.preco }}</li>
+      <li class="info">Teor: {{ cachaca.teor }}</li>
+      <li class="info">Quantidade: {{ cachaca.quantidade }}</li>
+      <li class="info">Cor: {{ cachaca.cor }}</li>
+      <li class="info">Madeira: {{ cachaca.madeira }}</li>
       <button class="botao-info">Editar</button>
     </div>
   </article>
