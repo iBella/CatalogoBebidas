@@ -18,7 +18,7 @@ export class CatalogoCervejaComponent implements OnInit {
   }
 
   onEdit(id) {
-    this.router.navigate(['editar/cerveja', id], {relativeTo: this.route}); 
+    this.router.navigate(['editar/cerveja', id]); 
   }
 
   ngOnInit() {}

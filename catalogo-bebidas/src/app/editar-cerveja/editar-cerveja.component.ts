@@ -23,6 +23,7 @@ export class EditarCervejaComponent implements OnInit {
       console.log(id);
       const cerveja$ = this.dataService.get_bebidasById(id);
       cerveja$.subscribe(cerveja => {
+        console.log('======>', cerveja);
         this.updateForm(cerveja);
       });
     });

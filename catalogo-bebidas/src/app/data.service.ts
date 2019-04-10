@@ -25,6 +25,7 @@ export class DataService {
   }
 
   get_bebidasById(id) {
-    return this.httpClient.get(this + "bebidas", id).pipe();
+    console.log('====>', id);
+    return this.httpClient.get(this.baseUrl + "bebidas/" + id).pipe();
   }
 }
