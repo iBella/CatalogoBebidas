@@ -35,7 +35,8 @@ export class EditarCervejaComponent implements OnInit {
       teor: [null, [Validators.required, Validators.minLength(3)]],
       quantidade: [null, [Validators.required, Validators.minLength(3)]],
       estilo: [null, [Validators.required, Validators.minLength(3)]],
-      imagem: [null, [Validators.required, Validators.minLength(3)]]
+      imagem: [null, [Validators.required, Validators.minLength(3)]],
+      tipo: ["CERVEJA"]
     });
   }
   updateForm(bebida) {

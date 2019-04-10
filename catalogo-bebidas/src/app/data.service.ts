@@ -30,7 +30,7 @@ export class DataService {
   }
 
   put_bebidas (bebida){
-    return this.httpClient.put(this.baseUrl + "bebidas/" + bebida.id, bebida).pipe();
+    return this.httpClient.put(this.baseUrl + "bebidas/editar/" + bebida.id, bebida).pipe();
 
   }
 }
