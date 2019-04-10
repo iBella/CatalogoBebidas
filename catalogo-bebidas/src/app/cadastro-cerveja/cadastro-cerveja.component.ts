@@ -10,7 +10,7 @@ import { DataService } from "../data.service";
 export class CadastroCervejaComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private dataService: DataService) {}
+  constructor(private fb: FormBuilder, private dataService: DataService) { }
 
   ngOnInit() {
     this.form = this.fb.group({

@@ -21,10 +21,9 @@ export class EditarCervejaComponent implements OnInit {
     this.route.params.subscribe((params: any) => {
       const id = params["id"];
       console.log(id);
-      const cerveja$ = this.dataService.get_bebidasById(id);
-      cerveja$.subscribe(cerveja => {
-        console.log('======>', cerveja);
-        this.updateForm(cerveja);
+      const bebida$ = this.dataService.get_bebidasById(id);
+      bebida$.subscribe(bebida => {
+        this.updateForm(bebida);
       });
     });
 
@@ -39,16 +38,38 @@ export class EditarCervejaComponent implements OnInit {
       imagem: [null, [Validators.required, Validators.minLength(3)]]
     });
   }
-  updateForm(cerveja) {
+  updateForm(bebida) {
     this.form.patchValue({
-      id: cerveja.id,
-      nome: cerveja.nome,
-      descricao: cerveja.descricao,
-      preco: cerveja.preco,
-      teor: cerveja.teor,
-      quantidade: cerveja.quantidade,
-      estilo: cerveja.estilo,
-      imagem: cerveja.imagem
+      id: bebida.id,
+      nome: bebida.nome,
+      descricao: bebida.descricao,
+      preco: bebida.preco,
+      teor: bebida.teor,
+      quantidade: bebida.quantidade,
+      estilo: bebida.estilo,
+      imagem: bebida.imagem
     });
+  }
+
+  onUpdate() {
+    if (this.form.valid) {
+      if (this.form.value.id) {
+        this.dataService
+          .put_bebidas(this.form.value)
+          .subscribe(
+            success => console.log("sucesso!"),
+            error => console.error(error),
+            () => console.log("Update OK")
+          );
+      } else {
+        this.dataService
+          .post_bebida(this.form.value)
+          .subscribe(
+            success => console.log("sucesso!"),
+            error => console.error(error),
+            () => console.log("Request OK")
+          );
+      }
+    }
   }
 }
