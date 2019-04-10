@@ -1,7 +1,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: flex-start;
   font-family: exo, sans-serif;
   justify-content: center;
 }
@@ -11,33 +11,18 @@
   margin: 10px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  font-family: exo, sans-serif;
 }
 
 .card img {
   max-width: 100%;
 }
 
-.card .text {
-  padding: 0 20px 20px;
+.btn{
+ float: right;
+ margin: 50px;
 }
 
-.card .text>button {
-  background: gray;
-  border: 0;
-  color: white;
-  padding: 10px;
-  width: 100%;
-}
-
-.botao-info {
-  margin-top: 10px;
-}
-
-.info {
-  display: block;
-}
-
-.pesquisa {
-  width: 100%;
-  text-align: center;
+.titulo{
+  margin-top: 30px;
 }

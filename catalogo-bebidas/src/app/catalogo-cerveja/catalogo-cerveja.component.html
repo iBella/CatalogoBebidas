@@ -1,16 +1,25 @@
 <app-header></app-header>
-
-<main class="cards">
-  <article class="card" *ngFor="let cerveja of cervejas">
-    <img [src]="cerveja.imagem" alt="Sample photo" />
-    <div class="text">
-      <h3>{{ cerveja.nome }}</h3>
-      <p class="info">{{ cerveja.descricao }}</p>
-      <li class="info">Preço: {{ cerveja.preco }}</li>
-      <li class="info">Teor: {{ cerveja.teor }}</li>
-      <li class="info">Quantidade: {{ cerveja.quantidade }}</li>
-      <li class="info">Estilo: {{ cerveja.estilo }}</li>
-      <button class="botao-info" (click)="onEdit(cerveja.id)">Editar</button>
+<section>
+  <div class="container py-3">
+    <div class="card" article class="card" *ngFor="let cerveja of cervejas">
+      <div class="row ">
+        <div class="col-md-4">
+          <img [src]="cerveja.imagem" class="w-100" />
+        </div>
+        <div class="col-md-8 px-3">
+          <div class="card-block px-3">
+            <h4 class="titulo">{{ cerveja.nome }}</h4>
+            <p class="descricao">{{ cerveja.descricao }}</p>
+            <li class="info">Preço: {{ cerveja.preco }}</li>
+            <li class="info">Teor: {{ cerveja.teor }}</li>
+            <li class="info">Quantidade: {{ cerveja.quantidade }}</li>
+            <li class="info">Estilo: {{ cerveja.estilo }}</li>
+            <button class="btn btn-info" (click)="onEdit(cerveja.id)">
+              Editar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </article>
-</main>
+  </div>
+</section>
