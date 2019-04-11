@@ -6,12 +6,12 @@ using System.Linq;
 
 namespace CatalogoApi.Infraestruturas
 {
-    public class MongoDAO<T> : IBebidaDAO<T> where T : Base
+    public class MongoBD<T> : IInfra<T> where T : Base
     {
         private MongoClient Client;
         private IMongoCollection<T> _collection;
 
-        public MongoDAO(IConfiguration config, string database, string collection)
+        public MongoBD(IConfiguration config, string database, string collection)
         {
             Conexao(config.GetConnectionString(database));
             Database(database, collection);

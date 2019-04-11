@@ -2,7 +2,7 @@
 
 namespace CatalogoApi.Infraestruturas
 {
-    public interface IBebidaDAO<T>
+    public interface IInfra<T>
     {
         List<T> ListarTodas();
         T Listar(string id);
