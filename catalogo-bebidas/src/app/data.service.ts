@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { pipe } from "@angular/core/src/render3";
 
 @Injectable({
   providedIn: "root"
@@ -28,8 +27,7 @@ export class DataService {
 
   get_bebidasById(id) {
     console.log("====>", id);
-    return this.httpClient.get(this.baseUrl + "bebidas/" + id)
-      .pipe();
+    return this.httpClient.get(this.baseUrl + "bebidas/" + id).pipe();
   }
 
   put_bebidas(bebida) {

@@ -10,7 +10,11 @@ import { Router, RouterModule, ActivatedRoute } from "@angular/router";
 export class CatalogoCervejaComponent implements OnInit {
   public cervejas = [];
 
-  constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     this.dataService.get_cervejas().subscribe((res: any[]) => {
       console.log(res);
       this.cervejas = res;
@@ -18,7 +22,7 @@ export class CatalogoCervejaComponent implements OnInit {
   }
 
   onEdit(id) {
-    this.router.navigate(['editar/cerveja', id]); 
+    this.router.navigate(["editar/cerveja", id]);
   }
 
   ngOnInit() {}

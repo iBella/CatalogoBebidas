@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { TelaInicialComponent } from "./tela-inicial/tela-inicial.component";
 import { CatalogoCachacaComponent } from "./catalogo-cachaca/catalogo-cachaca.component";
 import { CatalogoCervejaComponent } from "./catalogo-cerveja/catalogo-cerveja.component";
 import { CadastroEscolhaComponent } from "./cadastro-escolha/cadastro-escolha.component";
@@ -12,16 +11,10 @@ import { EditarCachacaComponent } from "./editar-cachaca/editar-cachaca.componen
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "tela-inicial",
+    redirectTo: "catalogo-cerveja",
     pathMatch: "full"
   },
-  {
-    path: "tela-inicial",
-    component: TelaInicialComponent,
-    data: {
-      title: "Tela Inicial"
-    }
-  },
+
   {
     path: "catalogo-cachaca",
     component: CatalogoCachacaComponent,
@@ -66,7 +59,7 @@ const routes: Routes = [
   },
   {
     path: "editar/cachaca/:id",
-    component: EditarCervejaComponent,
+    component: EditarCachacaComponent,
     data: {
       title: "Editar Cerveja"
     }
