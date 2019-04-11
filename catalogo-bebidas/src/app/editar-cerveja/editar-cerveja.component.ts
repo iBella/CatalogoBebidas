@@ -77,7 +77,7 @@ export class EditarCervejaComponent implements OnInit {
   onDelete() {
     if (this.form.value.id) {
       this.dataService
-        .put_bebidas(this.form.value)
+        .delete_bebidas(this.form.value)
         .subscribe(
           success => console.log("sucesso!"),
           error => console.error(error),
