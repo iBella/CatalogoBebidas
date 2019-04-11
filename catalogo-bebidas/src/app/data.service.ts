@@ -27,12 +27,18 @@ export class DataService {
   }
 
   get_bebidasById(id) {
-    console.log('====>', id);
+    console.log("====>", id);
     return this.httpClient.get(this.baseUrl + "bebidas/" + id).pipe();
   }
 
-  put_bebidas (bebida){
-    return this.httpClient.put(this.baseUrl + "bebidas/editar/" + bebida.id, bebida).pipe();
-
+  put_bebidas(bebida) {
+    return this.httpClient
+      .put(this.baseUrl + "bebidas/editar/" + bebida.id, bebida)
+      .pipe();
+  }
+  delete_bebidas(bebida) {
+    return this.httpClient
+      .delete(this.baseUrl + "bebidas/remover/" + bebida.id)
+      .pipe();
   }
 }

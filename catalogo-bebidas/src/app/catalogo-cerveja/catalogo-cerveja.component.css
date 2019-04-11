@@ -4,6 +4,7 @@
   align-items: flex-start;
   font-family: exo, sans-serif;
   justify-content: center;
+  
 }
 
 .card {
@@ -12,17 +13,24 @@
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
   font-family: exo, sans-serif;
+  
 }
 
 .card img {
-  max-width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
+  
 }
 
-.btn{
- float: right;
- margin: 50px;
+.btn {
+  float: right;
+  margin: 10px;
 }
 
-.titulo{
+.titulo {
   margin-top: 30px;
+}
+.icone{
+  padding-right: 3px;
 }

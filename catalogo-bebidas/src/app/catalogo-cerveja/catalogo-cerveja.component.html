@@ -10,10 +10,10 @@
           <div class="card-block px-3">
             <h4 class="titulo">{{ cerveja.nome }}</h4>
             <p class="descricao">{{ cerveja.descricao }}</p>
-            <li class="info">Preço: {{ cerveja.preco }}</li>
-            <li class="info">Teor: {{ cerveja.teor }}</li>
-            <li class="info">Quantidade: {{ cerveja.quantidade }}</li>
-            <li class="info">Estilo: {{ cerveja.estilo }}</li>
+            <p class="info"><img src="../../assets/icone_money.png" class="icone" />  Preço: {{ cerveja.preco }}</p>
+            <p class="info"><img src="../../assets/icone_alcohol.png" class="icone" />  Teor: {{ cerveja.teor }}</p>
+            <p class="info"><img src="../../assets/icone_ruler.png" class="icone" />  Quantidade: {{ cerveja.quantidade }}</p>
+            <p class="info"><img src="../../assets/icone_style.png" class="icone" />  Estilo: {{ cerveja.estilo }}</p>
             <button class="btn btn-info" (click)="onEdit(cerveja.id)">
               Editar
             </button>

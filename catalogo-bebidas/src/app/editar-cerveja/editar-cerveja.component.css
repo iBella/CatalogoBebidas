@@ -2,11 +2,9 @@
     margin: 30px;
 }
 
-.btn {
+.btn{
     float: right;
-    background-color: rgb(219, 134, 7);
-    border-color: rgb(219, 134, 7);
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .titulo {
